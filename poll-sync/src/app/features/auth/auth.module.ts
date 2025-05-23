@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 var routes:Routes=[
   {
     path:'login',
     component:LoginComponent
   },{
-    path:'registration',
+    path:'register',
     component:RegistrationComponent
   },
 ]
@@ -21,6 +22,7 @@ var routes:Routes=[
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     RouterModule.forChild(routes)
   ]
 })
