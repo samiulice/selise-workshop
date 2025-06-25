@@ -1,0 +1,37 @@
+
+        .page-content {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+        }
+        .card-hover {
+          background-color:#f1f5f9;
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .action-btn {
+            transition: all 0.2s ease;
+            padding: 8px;
+            border-radius: 8px;
+        }
+        .action-btn:hover {
+            transform: scale(1.1);
+        }
+        .table-row-hover {
+            transition: background-color 0.2s ease;
+        }
+        .table-row-hover:hover {
+            background-color: #f1f5f9;
+        }

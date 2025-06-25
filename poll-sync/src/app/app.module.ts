@@ -4,6 +4,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './features/home/home.module';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { tokenInterceptor } from './core/interceptors/token.interceptor';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,11 @@ import { HomeModule } from './features/home/home.module';
     SharedModule,
     HomeModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    provideHttpClient(withInterceptors([tokenInterceptor])),
+  ],
+  bootstrap: [AppComponent, NavbarComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {}
+}
