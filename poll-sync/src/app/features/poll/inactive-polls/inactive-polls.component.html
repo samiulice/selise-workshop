@@ -1,1 +1,58 @@
-<p>inactive-polls works!</p>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 m-4">
+  @if (totalPolls === 0) {
+  <div class="col-span-full text-center text-shadow-slate-600 py-8">
+    There is no poll in the archive list.
+  </div>
+  }
+  @for(poll of inActivePollList; track poll._id) {
+  <!-- Poll Card -->
+  <div
+    class="bg-white shadow-sm rounded-lg p-2 w-full text-sm h-66"
+    style="border: 1px solid #00000055"
+  >
+    <div class="rounded-lg p-2 w-full text-sm h-54 overflow-auto">
+      <!-- Poll Question -->
+      <h2 class="text-base font-medium text-gray-800 mb-1">
+        {{ poll.question }}
+      </h2>
+
+      <!-- Scrollable Options with Vote Count -->
+      <div class="space-y-1 overflow-y-auto">
+        @for (opt of poll.options; track $index) {
+        <div
+          class="relative w-full h-8 rounded overflow-hidden text-sm"
+          style="border: 1px solid #00000055"
+        >
+          <!-- Fill -->
+          <div
+            class="absolute top-0 left-0 h-full"
+            style="background-color: #d6e1f4"
+            [style.width.%]="opt.percentage"
+          ></div>
+
+          <!-- Text on Top -->
+          <div
+            class="relative z-10 flex justify-between items-center h-full px-3 text-black"
+          >
+            <span>{{ opt.optionText }}</span>
+            <span class="text-xs">
+              {{ opt.percentage || 0 }}% ({{ opt.voteCount || 0 }} votes)
+            </span>
+          </div>
+        </div>
+
+        }
+      </div>
+    </div>
+    <div class="h-8 flex justify-between items-center text-xs mt-2">
+      <span class="text-[0.7rem]">
+        Started: {{ poll.createdAt | date : "dd-MMM-yyyy" }}
+      </span>
+      <span class="text-[0.7rem]">
+        Ended: {{ poll.updatedAt | date : "dd-MMM-yyyy" }}
+      </span>
+    </div>
+  </div>
+
+  }
+</div>

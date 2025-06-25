@@ -1,1 +1,146 @@
-<p>home-wrapper works!</p>
+<!-- Hero Section -->
+<section id="heroSection" class="hero-section py-5 relative">
+  <div class="container mx-auto px-4">
+    <div class="max-w-2xl">
+      <h1 class="text-5xl leading-16 md:text-6xl font-bold mb-8 text-gray-900">
+        Create a poll<br />
+        <span class="text-blue-800">in seconds</span>
+      </h1>
+      <p class=" text-gray-600 mb-8 leading-relaxed">
+        No more endless group chats. Instantly organize plans or collect feedback with ease.<br />
+        Set up a poll in seconds and let everyone vote—quick, simple, and stress-free.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 mb-6">
+        <a
+        routerLink="/polls/create"
+          id="createPollBtn"
+          class="bg-blue-950 text-white px-8 py-3 rounded-lg hover:bg-cyan-950 transition font-medium"
+        >
+          Create a poll
+      </a>
+        <a [routerLink]="['/polls/list/active']"
+          class="bg-gray-100 text-gray-900 px-8 py-3 rounded-lg hover:bg-blue-950 hover:text-white transition font-medium border border-gray-300"
+        >
+          Vote Now
+      </a>
+      </div>
+      <!-- <p class="text-sm text-gray-500">No signup required</p> -->
+    </div>
+  </div>
+
+  <!-- Voting Hand Illustration -->
+  <div class="voting-hand">
+    <svg width="300" height="300" viewBox="0 0 300 300" class="opacity-40">
+      <!-- Ballot Box -->
+      <rect
+        x="80"
+        y="180"
+        width="140"
+        height="80"
+        rx="8"
+        fill="#3B82F6"
+        opacity="0.8"
+      />
+      <rect x="85" y="185" width="130" height="3" fill="#60A5FA" />
+      <!-- Hand -->
+      <path
+        d="M120 120 Q110 100 130 90 Q140 85 150 90 Q160 85 170 90 Q180 85 190 90 Q200 100 190 120 L180 140 Q175 150 170 160 L150 180 L130 160 Q125 150 120 140 Z"
+        fill="#10B981"
+        opacity="0.9"
+      />
+      <!-- Ballot Paper -->
+      <rect
+        x="140"
+        y="120"
+        width="30"
+        height="40"
+        rx="2"
+        fill="#F3F4F6"
+        transform="rotate(-10 155 140)"
+      />
+      <!-- Vote mark -->
+      <path
+        d="M148 135 L152 139 L162 129"
+        stroke="#3B82F6"
+        stroke-width="2"
+        fill="none"
+        transform="rotate(-10 155 140)"
+      />
+    </svg>
+  </div>
+</section>
+<section class="bg-purple-50 py-5">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-4">Why PollSync?</h2>
+    <p class="text-center text-gray-500 text-sm mb-4">
+      TRUSTED BY OVER 1,500,000 USERS WORLDWIDE
+    </p>
+    <div class="grid md:grid-cols-3 gap-8 mb-10">
+      <div class="text-center p-6">
+        <div
+          class="bg-blue-950 w-12 h-12 rounded-lg mx-auto mb-4 flex items-center justify-center"
+        >
+          <svg
+            class="w-6 h-6 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Instant Results</h3>
+        <p class="text-gray-600">
+          Result analytics for every poll
+        </p>
+      </div>
+      <div class="text-center p-6">
+        <div
+          class="bg-blue-950 w-12 h-12 rounded-lg mx-auto mb-4 flex items-center justify-center"
+        >
+          <svg
+            class="w-6 h-6 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+            />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Easy to Use</h3>
+        <p class="text-gray-600">Create and share polls in just a few clicks</p>
+      </div>
+      <div class="text-center p-6">
+        <div
+          class="bg-blue-950 w-12 h-12 rounded-lg mx-auto mb-4 flex items-center justify-center"
+        >
+          <svg
+            class="w-6 h-6 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13 10V3L4 14h7v7l9-11h-7z"
+            />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Free Forever</h3>
+        <p class="text-gray-600">Unlimited polls and votes at no cost</p>
+      </div>
+    </div>
+  </div>
+</section>

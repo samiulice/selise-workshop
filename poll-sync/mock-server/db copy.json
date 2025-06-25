@@ -1,0 +1,291 @@
+{
+  "users": [
+    {
+      "id": "62e5",
+      "fullName": "Samiul Bashir",
+      "email": "coding.samiul@gmail.com",
+      "password": "Ss@12345",
+      "createdAt": "2025-05-25T05:40:46.622Z",
+      "updatedAt": "2025-05-25T05:40:46.622Z",
+      "votedPolls": [
+        {
+          "pollID": "1001",
+          "optionIndex": "0"
+        },
+        {
+          "pollID": "1002",
+          "optionIndex": "1"
+        },
+        {
+          "pollID": "1003",
+          "optionIndex": "1"
+        },
+        {
+          "pollID": "1004",
+          "optionIndex": "0"
+        },
+        {
+          "pollID": "c4cf",
+          "optionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "ab3e",
+      "fullName": "Imratuzzahan Sumi",
+      "email": "imratuzzahansum@gmail.com",
+      "password": "Ii@12345",
+      "createdAt": "2025-05-25T05:43:36.441Z",
+      "updatedAt": "2025-05-25T05:43:36.441Z",
+      "votedPolls": [
+        {
+          "pollID": "1001",
+          "optionIndex": "1"
+        },
+        {
+          "pollID": "1002",
+          "optionIndex": "1"
+        },
+        {
+          "pollID": "1003",
+          "optionIndex": "2"
+        },
+        {
+          "pollID": "1004",
+          "optionIndex": "0"
+        }
+      ]
+    }
+  ],
+  "polls": [
+    {
+      "id": "1001",
+      "question": "Which front-end framework do you prefer?",
+      "options": [
+        {
+          "optionText": "Angular",
+          "voteCount": 1
+        },
+        {
+          "optionText": "React",
+          "voteCount": 1
+        },
+        {
+          "optionText": "Vue",
+          "voteCount": 0
+        }
+      ],
+      "votes": [
+        {
+          "userId": "62e5",
+          "optionIndex": 0,
+          "votedAt": "2025-05-25T08:00:00.000Z"
+        },
+        {
+          "userId": "ab3e",
+          "optionIndex": 1,
+          "votedAt": "2025-05-25T08:01:00.000Z"
+        }
+      ],
+      "isActive": false,
+      "createdBy": "62e5",
+      "createdAt": "2025-05-20T09:00:00.000Z",
+      "updatedAt": "2025-05-25T08:02:00.000Z"
+    },
+    {
+      "id": "1002",
+      "question": "What's your favorite cloud platform?",
+      "options": [
+        {
+          "optionText": "AWS",
+          "voteCount": 0
+        },
+        {
+          "optionText": "Google Cloud",
+          "voteCount": 2
+        },
+        {
+          "optionText": "Azure",
+          "voteCount": 0
+        }
+      ],
+      "votes": [
+        {
+          "userId": "62e5",
+          "optionIndex": 1,
+          "votedAt": "2025-05-25T08:10:00.000Z"
+        },
+        {
+          "userId": "ab3e",
+          "optionIndex": 1,
+          "votedAt": "2025-05-25T08:12:00.000Z"
+        }
+      ],
+      "isActive": false,
+      "createdBy": "ab3e",
+      "createdAt": "2025-05-18T10:30:00.000Z",
+      "updatedAt": "2025-05-25T08:15:00.000Z"
+    },
+    {
+      "id": "1003",
+      "question": "Which operating system do you primarily use?",
+      "options": [
+        {
+          "optionText": "Windows",
+          "voteCount": 0
+        },
+        {
+          "optionText": "Linux",
+          "voteCount": 1
+        },
+        {
+          "optionText": "macOS",
+          "voteCount": 1
+        }
+      ],
+      "votes": [
+        {
+          "userId": "62e5",
+          "optionIndex": 1,
+          "votedAt": "2025-05-25T08:20:00.000Z"
+        },
+        {
+          "userId": "ab3e",
+          "optionIndex": 2,
+          "votedAt": "2025-05-25T08:22:00.000Z"
+        }
+      ],
+      "isActive": false,
+      "createdBy": "62e5",
+      "createdAt": "2025-05-15T08:00:00.000Z",
+      "updatedAt": "2025-05-25T08:25:00.000Z"
+    },
+    {
+      "id": "1004",
+      "question": "What's your go-to text editor?",
+      "options": [
+        {
+          "optionText": "VS Code",
+          "voteCount": 2
+        },
+        {
+          "optionText": "Sublime Text",
+          "voteCount": 0
+        },
+        {
+          "optionText": "Atom",
+          "voteCount": 0
+        }
+      ],
+      "votes": [
+        {
+          "userId": "62e5",
+          "optionIndex": 0,
+          "votedAt": "2025-05-25T08:30:00.000Z"
+        },
+        {
+          "userId": "ab3e",
+          "optionIndex": 0,
+          "votedAt": "2025-05-25T08:33:00.000Z"
+        }
+      ],
+      "isActive": false,
+      "createdBy": "ab3e",
+      "createdAt": "2025-05-10T12:30:00.000Z",
+      "updatedAt": "2025-05-25T08:35:00.000Z"
+    },
+    {
+      "id": "f5b9",
+      "question": "What is your gender",
+      "options": [
+        {
+          "optionText": "Male",
+          "voteCount": 0
+        },
+        {
+          "optionText": "Female",
+          "voteCount": 0
+        }
+      ],
+      "votes": [
+        {
+          "userId": "62e5",
+          "optionIndex": 0,
+          "votedAt": "2025-05-26T09:34:12.844Z"
+        }
+      ],
+      "isActive": true,
+      "createdBy": "",
+      "createdAt": "2025-05-25T07:36:39.984Z",
+      "updatedAt": "2025-05-25T07:36:39.984Z"
+    },
+    {
+      "id": "1e48",
+      "question": "What's your favourite color",
+      "options": [
+        {
+          "optionText": "Red",
+          "voteCount": 0
+        },
+        {
+          "optionText": "Green",
+          "voteCount": 0
+        },
+        {
+          "optionText": "Blue",
+          "voteCount": 0
+        },
+        {
+          "optionText": "Yellow",
+          "voteCount": 0
+        },
+        {
+          "optionText": "White",
+          "voteCount": 0
+        },
+        {
+          "optionText": "Black",
+          "voteCount": 0
+        }
+      ],
+      "votes": [],
+      "isActive": false,
+      "createdBy": "",
+      "createdAt": "2025-05-25T19:07:00.233Z",
+      "updatedAt": "2025-05-25T19:07:00.233Z"
+    },
+    {
+      "id": "c4cf",
+      "question": "How many bread do you want to eat before morning sync?",
+      "options": [
+        {
+          "optionText": "1",
+          "voteCount": 0
+        },
+        {
+          "optionText": "2",
+          "voteCount": 0
+        },
+        {
+          "optionText": "3",
+          "voteCount": 0
+        },
+        {
+          "optionText": "4",
+          "voteCount": 0
+        }
+      ],
+      "votes": [
+        {
+          "userId": "62e5",
+          "optionIndex": 0,
+          "votedAt": "2025-05-26T09:46:02.700Z"
+        }
+      ],
+      "isActive": true,
+      "createdBy": "",
+      "createdAt": "2025-05-26T05:28:14.580Z",
+      "updatedAt": "2025-05-26T05:28:14.580Z"
+    }
+  ]
+}
