@@ -1,0 +1,34 @@
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 m-4">
+  @if (isEmptyList()) {
+  <div class="col-span-full text-center text-shadow-slate-600 py-8">
+    There is no current poll.
+  </div>
+  }
+  @for(poll of activePollList; track $index){
+  <!-- Poll Card -->
+  <div   *ngIf="isVoted(poll._id)" class="bg-white shadow-sm rounded-lg p-4 w-full text-sm">
+    <h2 class="text-base font-medium text-gray-800 mb-3">
+      {{ poll.question }}
+    </h2>
+
+    <!-- Scrollable options -->
+    <div class="space-y-1 overflow-y-auto pr-1 max-h-20 overflow-auto">
+      @for (opt of poll.options; track $index;) {
+      <label
+        class="flex items-center gap-2 px-3 py-2 border border-gray-300 rounded cursor-pointer hover:bg-gray-50"
+      >
+        <input
+          type="radio"
+          (click)="voteOnPoll(poll._id, opt.optionText)"
+          name="{{ poll._id }}"
+          value="{{ $index }}"
+          class="accent-blue-500"
+        />
+        <span>{{ opt.optionText }}</span>
+      </label>
+      }
+    </div>
+  </div>
+
+  }
+</div>

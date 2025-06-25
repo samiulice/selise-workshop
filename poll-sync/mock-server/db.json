@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "id": "62e5",
+      "fullName": "Samiul Bashir",
+      "email": "coding.samiul@gmail.com",
+      "password": "Ss@12345",
+      "createdAt": "2025-05-25T05:40:46.622Z",
+      "updatedAt": "2025-05-25T05:40:46.622Z",
+      "votedPolls": [
+        {
+          "pollID": "44ed",
+          "optionIndex": 1
+        },
+        {
+          "pollID": "aa21",
+          "optionIndex": 0
+        }
+      ]
+    }
+  ],
+  "polls": [
+    {
+      "id": "44ed",
+      "question": "Which programming language do you like most?",
+      "options": [
+        {
+          "optionText": "Python",
+          "voteCount": 0
+        },
+        {
+          "optionText": "Go",
+          "voteCount": 0
+        },
+        {
+          "optionText": "JavaScript",
+          "voteCount": 0
+        },
+        {
+          "optionText": "C#",
+          "voteCount": 0
+        }
+      ],
+      "votes": [],
+      "isActive": true,
+      "createdBy": "",
+      "createdAt": "2025-05-26T09:49:03.733Z",
+      "updatedAt": "2025-05-26T09:49:03.733Z"
+    },
+    {
+      "id": "aa21",
+      "question": "What is your gender",
+      "options": [
+        {
+          "optionText": "Male",
+          "voteCount": 1
+        },
+        {
+          "optionText": "Female",
+          "voteCount": 0
+        }
+      ],
+      "votes": [
+        {
+          "userId": "62e5",
+          "optionIndex": 0,
+          "votedAt": "2025-05-26T09:58:27.039Z"
+        }
+      ],
+      "isActive": false,
+      "createdBy": "",
+      "createdAt": "2025-05-26T09:58:22.607Z",
+      "updatedAt": "2025-05-26T09:58:22.607Z"
+    }
+  ]
+}

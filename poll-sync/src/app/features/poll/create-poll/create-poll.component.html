@@ -1,0 +1,90 @@
+
+<div class="min-h-screen flex items-center justify-center bg-gray-50 py-4 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-md w-full">
+    <div class="card bg-white rounded-lg shadow-lg">
+      <div class="card-content p-6">
+        <form (ngSubmit)="onSubmit()" [formGroup]="pollCreationForm">
+          <div class="flex flex-col gap-4">
+            <!-- Header -->
+            <div class="mb-4 text-center">
+              <h1 class="text-2xl font-bold text-gray-800 mb-1">Create New Poll</h1>
+              <p class="text-gray-500 font-light">Quickly create and share your poll</p>
+            </div>
+
+            <!-- Question Input -->
+            <div class="form-group">
+              <label class="text-sm font-medium text-gray-700 mb-2">Poll Question</label>
+              <input
+                formControlName="question"
+                placeholder="Enter your question"
+                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              >
+              <div *ngIf="pollCreationForm.get('question')?.invalid && pollCreationForm.get('question')?.touched"
+                   class="text-red-500 text-sm mt-1">
+                Question is required
+              </div>
+            </div>
+
+            <!-- Options Section -->
+            <div class="form-group">
+              <label class="text-sm font-medium text-gray-700 mb-2">Poll Options</label>
+              <div formArrayName="options" class="flex flex-col">
+                <!-- Scrollable Options Container -->
+                <div class="max-h-40 overflow-y-auto space-y-3 pr-2"> <!-- Added max height and scrolling -->
+                  <div *ngFor="let option of options.controls; let i = index" class="flex gap-2 items-center">
+                    <div class="flex-1">
+                      <input
+                        [formControlName]="i"
+                        placeholder="Option {{i + 1}}"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                      >
+                      <div *ngIf="options.controls[i].invalid && (options.controls[i].dirty || options.controls[i].touched)"
+                          class="text-red-500 text-sm mt-1">
+                        Option is required
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      (click)="removeOption(i)"
+                      class="text-gray-400 hover:text-red-500 transition-colors"
+                      [disabled]="options.length <= 2"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Form Array Level Error -->
+                <div *ngIf="pollCreationForm.get('options')?.errors?.['minlength'] && pollCreationForm.get('options')?.touched"
+                    class="text-red-500 text-sm mt-2">
+                  At least two options are required
+                </div>
+
+                <!-- Add Option Button -->
+                <button
+                  type="button"
+                  (click)="addOption()"
+                  class="mt-3 text-blue-950 hover:text-blue-700 flex items-center gap-1 text-sm"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                  </svg>
+                  Add Option
+                </button>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit"
+              class="btn btn-primary w-full mt-4"
+              [disabled]="pollCreationForm.invalid">
+              Create Poll
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
